@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ETL Results</title>
+</head>
+
+<body>
+    <h2>✅ ETL Complete — Clean Records</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Valid?</th>
+        </tr>
+        {% for s in students %}
+        <tr>
+            <td>{{ s.student_id }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.course }}</td>
+            <td>{{ s.is_valid }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/etl/">⬅ Upload Another</a>
+</body>
+
+</html>
